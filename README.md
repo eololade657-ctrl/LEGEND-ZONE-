@@ -1,73 +1,53 @@
-<!DOCTYPE html>
+    
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VIP Blue Predictions</title>
-<style>
+
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, Helvetica, sans-serif; }
+
   body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: #e0f2fe; /* Light blue background */
     color: #1e293b;
-    padding: 12px;
+    padding: 8px;
   }
 
   h1 {
     text-align: center;
     color: #0ea5e9;
-    margin-bottom: 15px;
-    font-size: 26px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 800;
   }
 
   table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed; /* Force table to fit screen */
+    font-size: 13px;
   }
 
   th, td {
-    padding: 8px 6px;
+    padding: 4px 4px;
     text-align: center;
-    font-size: 14px;
+    word-wrap: break-word; /* Prevent overflow */
   }
 
   th {
     background-color: #0ea5e9;
     color: #fff;
+    font-size: 14px;
   }
 
-  tr:nth-child(even) {
-    background-color: #bae6fd; /* Light blue row */
-  }
+  tr:nth-child(even) { background-color: #bae6fd; }
+  tr:nth-child(odd)  { background-color: #dbeafe; }
 
-  tr:nth-child(odd) {
-    background-color: #dbeafe; /* Slightly lighter blue */
-  }
+  .pick { color: #2563eb; font-weight: bold; font-size: 13px; }
+  .score { color: #1e40af; font-weight: bold; font-size: 13px; }
 
-  .pick {
-    color: #2563eb; /* VIP dark blue */
-    font-weight: bold;
-  }
-
-  .score {
-    font-weight: bold;
-    color: #1e40af;
-  }
-
-  .win {
-    color: #16a34a;
-    font-weight: bold;
-  }
-
-  .loss {
-    color: #dc2626;
-    font-weight: bold;
-  }
-
-  .pending {
-    color: #fbbf24;
-    font-weight: bold;
-  }
+  .win { color: #16a34a; font-weight: bold; }
+  .loss { color: #dc2626; font-weight: bold; }
+  .pending { color: #fbbf24; font-weight: bold; }
 
 </style>
 </head>
