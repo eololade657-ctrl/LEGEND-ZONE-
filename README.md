@@ -1,97 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Blue VIP Predictions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Blue Predictions</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
-
   body {
-    background: #e0f2fe; /* Light sky blue background */
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0f2fe; /* Light blue background */
     color: #1e293b;
     padding: 12px;
   }
 
-  /* Header */
-  .header {
+  h1 {
     text-align: center;
+    color: #0ea5e9;
+    margin-bottom: 15px;
     font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 18px;
-    color: #0ea5e9; /* Bright VIP blue */
-    text-shadow: 0 0 6px #0ea5e9;
   }
 
-  /* Container */
-  .container { display: flex; flex-direction: column; gap: 10px; }
-
-  /* Card */
-  .card {
-    background: #bae6fd; /* Light blue card */
-    border-left: 6px solid #0ea5e9; /* VIP blue accent */
-    border-radius: 10px;
-    padding: 12px 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
+  table {
+    width: 100%;
+    border-collapse: collapse;
   }
 
-  .card:hover { transform: scale(1.02); }
-
-  /* Item layout */
-  .item {
-    display: flex;
-    justify-content: space-between;
-    margin: 4px 0;
-    font-size: 15px;
+  th, td {
+    padding: 8px 6px;
+    text-align: center;
+    font-size: 14px;
   }
 
-  .item-label { color: #0c4a6e; font-weight: 600; }
+  th {
+    background-color: #0ea5e9;
+    color: #fff;
+  }
 
-  /* Result colors */
-  .result-win { color: #16a34a; font-weight: bold; }
-  .result-lose { color: #dc2626; font-weight: bold; }
-  .result-pending { color: #fbbf24; font-weight: bold; }
+  tr:nth-child(even) {
+    background-color: #bae6fd; /* Light blue row */
+  }
+
+  tr:nth-child(odd) {
+    background-color: #dbeafe; /* Slightly lighter blue */
+  }
+
+  .pick {
+    color: #2563eb; /* VIP dark blue */
+    font-weight: bold;
+  }
+
+  .score {
+    font-weight: bold;
+    color: #1e40af;
+  }
+
+  .win {
+    color: #16a34a;
+    font-weight: bold;
+  }
+
+  .loss {
+    color: #dc2626;
+    font-weight: bold;
+  }
+
+  .pending {
+    color: #fbbf24;
+    font-weight: bold;
+  }
+
 </style>
 </head>
 <body>
 
-<div class="header">BLUE VIP PREDICTIONS</div>
+<h1>VIP BLUE PREDICTIONS</h1>
 
-<div class="container">
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Match</th>
+    <th>Pick</th>
+    <th>Score</th>
+    <th>Results</th>
+  </tr>
 
-  <!-- Day 1 -->
-  <div class="card">
-    <div class="item"><span class="item-label">Date:</span> 10 Feb 2026</div>
-    <div class="item"><span class="item-label">Match:</span> Barcelona vs Real Madrid</div>
-    <div class="item"><span class="item-label">Tip:</span> Over 3.5 Goals</div>
-    <div class="item"><span class="item-label">Results:</span> <span class="result-pending">PENDING</span></div>
-  </div>
+  <tr>
+    <td>10/02/2026</td>
+    <td>Barcelona vs Real Madrid</td>
+    <td class="pick">Over 3.5</td>
+    <td class="score">3-2</td>
+    <td class="win">WIN</td>
+  </tr>
 
-  <!-- Day 2 -->
-  <div class="card">
-    <div class="item"><span class="item-label">Date:</span> 09 Feb 2026</div>
-    <div class="item"><span class="item-label">Match:</span> Liverpool vs Manchester City</div>
-    <div class="item"><span class="item-label">Tip:</span> B.T.T.S</div>
-    <div class="item"><span class="item-label">Results:</span> <span class="result-win">WIN</span></div>
-  </div>
+  <tr>
+    <td>09/02/2026</td>
+    <td>Liverpool vs Manchester City</td>
+    <td class="pick">B.T.T.S</td>
+    <td class="score">2-2</td>
+    <td class="pending">PENDING</td>
+  </tr>
 
-  <!-- Day 3 -->
-  <div class="card">
-    <div class="item"><span class="item-label">Date:</span> 08 Feb 2026</div>
-    <div class="item"><span class="item-label">Match:</span> Juventus vs Inter Milan</div>
-    <div class="item"><span class="item-label">Tip:</span> Over 2.5 Goals</div>
-    <div class="item"><span class="item-label">Results:</span> <span class="result-lose">LOSS</span></div>
-  </div>
+  <tr>
+    <td>08/02/2026</td>
+    <td>Juventus vs Inter Milan</td>
+    <td class="pick">Over 2.5</td>
+    <td class="score">2-1</td>
+    <td class="loss">LOSS</td>
+  </tr>
 
-  <!-- Day 4 -->
-  <div class="card">
-    <div class="item"><span class="item-label">Date:</span> 07 Feb 2026</div>
-    <div class="item"><span class="item-label">Match:</span> PSG vs Lyon</div>
-    <div class="item"><span class="item-label">Tip:</span> B.T.T.S</div>
-    <div class="item"><span class="item-label">Results:</span> <span class="result-win">WIN</span></div>
-  </div>
+  <tr>
+    <td>07/02/2026</td>
+    <td>PSG vs Lyon</td>
+    <td class="pick">B.T.T.S</td>
+    <td class="score">3-1</td>
+    <td class="win">WIN</td>
+  </tr>
 
-</div>
+  <tr>
+    <td>06/02/2026</td>
+    <td>Manchester United vs Fulham</td>
+    <td class="pick">Over 3.5</td>
+    <td class="score">4-1</td>
+    <td class="win">WIN</td>
+  </tr>
+</table>
+
 </body>
 </html>
