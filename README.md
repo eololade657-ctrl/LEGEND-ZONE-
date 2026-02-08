@@ -1,107 +1,306 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Predictions</title>
+<title>VIP PAGE | BANKER</title>
+
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, Helvetica, sans-serif; }
+*{
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+}
 
-  body {
-    background-color: #e0f7ff; /* Light blue background */
-    color: #1e293b;
-    padding: 4px; /* Ultra tight padding */
-  }
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    padding:10px;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed; /* Fits small screens */
-    font-size: 11px; /* Small but readable */
-  }
+.container{
+    width:100%;
+    max-width:390px;
+    background:#1b1b1b;
+    border-radius:10px;
+    overflow:hidden;
+}
 
-  th, td {
-    padding: 2px 3px; /* Tiny padding for max compactness */
-    text-align: center;
-    word-wrap: break-word; 
-  }
+/* HEADER */
+.header{
+    background:#6cc070;
+    padding:12px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-  th {
-    background-color: #0ea5e9;
-    color: #fff;
-    font-size: 12px;
-  }
+.header-left{
+    color:#000;
+    font-weight:bold;
+    font-size:14px;
+}
 
-  tr:nth-child(even) { background-color: #bae6fd; }
-  tr:nth-child(odd)  { background-color: #d0f0ff; }
+.header-left span{
+    margin-right:8px;
+}
 
-  .pick { color: #2563eb; font-weight: bold; font-size: 11px; }
+.header-right{
+    color:#000;
+    font-size:18px;
+}
 
-  .win { color: #16a34a; font-weight: bold; font-size: 11px; }
-  .loss { color: #dc2626; font-weight: bold; font-size: 11px; }
-  .pending { color: #fbbf24; font-weight: bold; font-size: 11px; }
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    color:#fff;
+    font-size:12px;
+}
 
+/* VERY VISIBLE GRID LINES */
+td{
+    padding:10px 6px;
+    text-align:center;
+    border:2px solid #6a6a6a;
+}
+
+/* COLUMN STYLES */
+td.match{
+    text-align:left;
+    width:38%;
+}
+
+td.date{
+    width:18%;
+    color:#f0f0f0;
+    font-weight:700;
+}
+
+td.market{
+    width:18%;
+}
+
+/* STACK OVER / 3.5 */
+.market-top,
+.market-bottom{
+    display:block;
+    line-height:1.1;
+}
+
+td.odds{ width:10%; }
+td.score{ width:10%; }
+
+td.status{
+    width:10%;
+    font-weight:bold;
+}
+
+/* STATUS COLORS */
+.win{ color:#38ff6b; }
+.lost{ color:#ff3b3b; }
 </style>
 </head>
+
 <body>
 
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Match</th>
-    <th>Pick</th>
-    <th>Result</th>
-  </tr>
+<div class="container">
 
-  <tr>
-    <td>10/02/26</td>
-    <td>Barcelona vs Real Madrid</td>
-    <td class="pick">Over 3.5</td>
-    <td class="win">WIN</td>
-  </tr>
+    <div class="header">
+        <div class="header-left">
+            <span>VIP PAGE</span> | <span>BANKER</span>
+        </div>
+        <div class="header-right">🔔</div>
+    </div>
 
-  <tr>
-    <td>09/02/26</td>
-    <td>Liverpool vs Man City</td>
-    <td class="pick">B.T.T.S</td>
-    <td class="pending">PENDING</td>
-  </tr>
+    <table>
+        <tr>
+            <td class="date">25.01.2026</td>
+            <td class="match">Feyenoord - Heracles</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">4.5</span>
+            </td>
+            <td class="odds">3.15</td>
+            <td class="score">4:2</td>
+            <td class="status win">WIN</td>
+        </tr>
 
-  <tr>
-    <td>08/02/26</td>
-    <td>Juventus vs Inter</td>
-    <td class="pick">Over 2.5</td>
-    <td class="loss">LOSS</td>
-  </tr>
+        <tr>
+            <td class="date">26.01.2026</td>
+            <td class="match">Crystal Palace U21 - Derby U21</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">4.5</span>
+            </td>
+            <td class="odds">3.20</td>
+            <td class="score">6:0</td>
+            <td class="status win">WIN</td>
+        </tr>
 
-  <tr>
-    <td>07/02/26</td>
-    <td>PSG vs Lyon</td>
-    <td class="pick">B.T.T.S</td>
-    <td class="win">WIN</td>
-  </tr>
+        <tr>
+            <td class="date">27.01.2026</td>
+            <td class="match">Portimonense U23 - Gil Vicente U23</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.23</td>
+            <td class="score">1:3</td>
+            <td class="status win">WIN</td>
+        </tr>
 
-  <tr>
-    <td>06/02/26</td>
-    <td>Man Utd vs Fulham</td>
-    <td class="pick">Over 3.5</td>
-    <td class="win">WIN</td>
-  </tr>
+        <tr>
+            <td class="date">28.01.2026</td>
+            <td class="match">Napoli - Chelsea</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.10</td>
+            <td class="score">2:3</td>
+            <td class="status win">WIN</td>
+        </tr>
 
-  <tr>
-    <td>05/02/26</td>
-    <td>Atletico vs Sevilla</td>
-    <td class="pick">Over 2.5</td>
-    <td class="pending">PENDING</td>
-  </tr>
+        <tr>
+            <td class="date">29.01.2026</td>
+            <td class="match">Umm Salal - Al Arabi</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.45</td>
+            <td class="score">2:4</td>
+            <td class="status win">WIN</td>
+        </tr>
 
-  <tr>
-    <td>04/02/26</td>
-    <td>Chelsea vs Arsenal</td>
-    <td class="pick">Over 3.5</td>
-    <td class="win">WIN</td>
-  </tr>
+        <tr>
+            <td class="date">30.01.2026</td>
+            <td class="match">ADO Den - Jong AZ</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.80</td>
+            <td class="score">1:4</td>
+            <td class="status win">WIN</td>
+        </tr>
 
-</table>
+        <tr>
+            <td class="date">31.01.2026</td>
+            <td class="match">Larnaca - Enosis Neon</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.55</td>
+            <td class="score">4:0</td>
+            <td class="status win">WIN</td>
+        </tr>
+
+        <tr>
+            <td class="date">01.02.2026</td>
+            <td class="match">Excelsior - Ajax</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.45</td>
+            <td class="score">2:2</td>
+            <td class="status win">WIN</td>
+        </tr>
+
+        <tr>
+            <td class="date">02.02.2026</td>
+            <td class="match">Jong PSV - SC Cambuur</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.60</td>
+            <td class="score">3:1</td>
+            <td class="status win">WIN</td>
+        </tr>
+
+        <tr>
+            <td class="date">03.02.2026</td>
+            <td class="match">AFC Fylde - Peterborough</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.20</td>
+            <td class="score">5:2</td>
+            <td class="status win">WIN</td>
+        </tr>
+
+        <tr>
+            <td class="date">04.02.2026</td>
+            <td class="match">NEC Nijmegen - Volendam</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.00</td>
+            <td class="score">1:0</td>
+            <td class="status lost">LOST</td>
+        </tr>
+
+        <tr>
+            <td class="date">05.02.2026</td>
+            <td class="match">Al Wahda - Al Bataeh</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.30</td>
+            <td class="score">2:2</td>
+            <td class="status win">WIN</td>
+        </tr>
+
+        <tr>
+            <td class="date">06.02.2026</td>
+            <td class="match">De Graafschap - Jong Ajax</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.00</td>
+            <td class="score">4:0</td>
+            <td class="status win">WIN</td>
+        </tr>
+ 
+
+
+
+
+
+             <tr>
+            <td class="date">07.02.2026</td>
+            <td class="match">Real Sociedad - Elche</td>
+            <td class="market">
+                <span class="market-top">Over</span>
+                <span class="market-bottom">3.5</span>
+            </td>
+            <td class="odds">3.50</td>
+            <td class="score"> </td>
+            <td class="status "> </td>
+        </tr>
+ 
+
+
+
+
+
+
+
+
+
+   </table>
+
+</div>
 
 </body>
 </html>
